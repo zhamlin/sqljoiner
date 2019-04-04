@@ -100,8 +100,8 @@ func main() {
 			defToFile[def.Name] = path
 		}
 
-		sql := sql.GetDeps(tree).Unique()
-		for _, dep := range sql {
+		deps := sql.GetDeps(tree).Unique()
+		for _, dep := range deps {
 			filename, has := defToFile[dep.Name]
 			if !has {
 				addEdgeDelayed(path, dep.Name)
