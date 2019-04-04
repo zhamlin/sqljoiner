@@ -105,7 +105,7 @@ func main() {
 			filename, has := defToFile[dep.Name]
 			if !has {
 				addEdgeDelayed(path, dep.Name)
-			} else {
+			} else if filename != path {
 				graph.CreateNode(filename)
 				node.AddEdge(graph.Node(filename))
 			}
