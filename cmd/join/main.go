@@ -40,6 +40,10 @@ func main() {
 	if *sqlDirectory == "" {
 		panic("must specify directory")
 	}
+	if _, err := os.Stat(*sqlDirectory); os.IsNotExist(err) {
+		panic(*sqlDirectory + " does not exist")
+	}
+
 	graph := &sql.DependecyGraph{}
 	defToFile := map[string]string{}
 	fileCache := map[string]string{}
