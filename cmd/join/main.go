@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"sqljoiner/pkg/sql"
+	"github.com/zhamlin/sqljoiner/pkg/sql"
 )
 
 type arrayFlags []string
