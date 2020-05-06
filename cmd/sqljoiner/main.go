@@ -1,4 +1,4 @@
-package main // import sqljoiner
+package main
 
 import (
 	"flag"
